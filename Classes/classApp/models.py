@@ -1,18 +1,21 @@
+from django.db import models
 # Create your models here.
-class djangoClasses:
-    Title: str = "Django University"
-    Course_Number: str = "1234567"
-    Instructor_Name: str = "Mike"
-    Duration = "2.0"
+class djangoClasses(models.Model):
+    Title=models.CharField(max_length=50, null=False)
+    Course_Number=models.IntegerField()
+    Instructor_Name=models.CharField(max_length=50, null=False)
+    Duration=models.FloatField()
 
-
+    classes=models.Manager()
+    def __str__(self):
+        return self.Title
 # Object math with attributes Title, Course Number, Instructor name, and Duration
-math = djangoClasses()
-math.Title = "Algebra"
-math.Course_Number = '4959'
-math.Instructor_Name = "Kyle"
-math.Duration = "3.0"
-print(math.Course_Number, math.Duration, math.Title, math.Instructor_Name)
+math = djangoClasses(
+    1,"math",
+    1,"kyle",
+    2.0)
+math.save()
+math.__str__()
 
 # Object english with attributes Title, Course Number, Instructor name, and Duration
 english = djangoClasses()
