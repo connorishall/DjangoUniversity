@@ -18,17 +18,16 @@ math.save()
 math.__str__()
 
 # Object english with attributes Title, Course Number, Instructor name, and Duration
-english = djangoClasses()
-english.Title = "American English"
-english.Course_Number = '2452'
-english.Instructor_Name = "Caiden"
-english.Duration = "2.0"
-print(english.Instructor_Name, english.Duration, english.Course_Number, english.Title)
-
+english = djangoClasses(
+    1,"American English",
+    1,"caiden",
+    1.0)
+english.save()
+english.__str__()
 # Object history with attributes Title, Course Number, Instructor name, and Duration
-history = djangoClasses()
-history.Title = "World History"
-history.Course_Number = '5937'
-history.Instructor_Name = "Emily"
-history.Duration = "1.0"
-print(history.Duration, history.Instructor_Name, history.Course_Number, history.Title)
+history = djangoClasses(
+    1,"world history",
+    1,"chris",
+    3.0)
+history.save()
+history.__str__()
