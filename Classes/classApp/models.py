@@ -12,22 +12,22 @@ class djangoClasses(models.Model):
 # Object math with attributes Title, Course Number, Instructor name, and Duration
 math = djangoClasses(
     1,"math",
-    1,"kyle",
+    2,"kyle",
     2.0)
 math.save()
 math.__str__()
 
 # Object english with attributes Title, Course Number, Instructor name, and Duration
 english = djangoClasses(
-    1,"American English",
-    1,"caiden",
+    3,"American English",
+    4,"caiden",
     1.0)
 english.save()
 english.__str__()
 # Object history with attributes Title, Course Number, Instructor name, and Duration
 history = djangoClasses(
-    1,"world history",
-    1,"chris",
+    5,"world history",
+    6,"chris",
     3.0)
 history.save()
 history.__str__()
